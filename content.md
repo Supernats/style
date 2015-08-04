@@ -1,6 +1,6 @@
 class: center, middle
 
-# Style
+# Ruby Style
 
 ---
 
