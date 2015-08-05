@@ -74,7 +74,7 @@ end
 
 ---
 
-> Don't go crazy with `!!`. Consider having that functionality in a boolean method that is called elsewhere. 
+> Don't go crazy with `!!`. Consider having that functionality in a boolean method that is called elsewhere.
 > > -- Nathan
 
 ```ruby
@@ -148,8 +148,11 @@ class RailsPerson < ActiveRecord::Base
 end
 
 # Uses same API regardless of inheritance
-temperance = Person.create 'Temperance', 30
-rails_temperance = RailsPerson.create 'Temperance', 30
+temperance = Person.create('Temperance', 30)
+rails_temperance = RailsPerson.create('Temperance', 30)
+
+# I don't care about the return of this one
+RailsPerson.create('Drunkenness', 40)
 
 temperance.name
 puts temperance.age
